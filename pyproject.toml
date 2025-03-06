@@ -3,7 +3,7 @@
 # ======================================================================================
 
 [project]
-name = "template_project"
+name = "final_project_btb"
 description = "Template for reproducible research projects in economics"
 requires-python = ">=3.11"
 dynamic = ["version"]
@@ -21,10 +21,10 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
 ]
 authors = [
-    { name = "JANE DOE", email = "janedoe@example-university.com" },
+    { name = "BRENDA TORRES BLOMER", email = "s33btorr@uni-bonn.de" },
 ]
 maintainers = [
-    { name = "JANE DOE", email = "janedoe@example-university.com" },
+    { name = "BRENDA TORRES BLOMER", email = "s33btorr@uni-bonn.de" },
 ]
 
 [project.readme]
@@ -49,7 +49,7 @@ requires = ["hatchling", "hatch_vcs"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "src/template_project/_version.py"
+version-file = "src/final_project_btb/_version.py"
 
 [tool.hatch.build.targets.sdist]
 exclude = ["tests"]
@@ -70,7 +70,7 @@ allow-direct-references = true
 # ======================================================================================
 
 [tool.pytask.ini_options]
-paths = ["./src/template_project", "./documents"]
+paths = ["./src/final_project_btb"]
 pdbcls = "pdbp:Pdb"
 
 # ======================================================================================
@@ -93,6 +93,14 @@ extend-ignore = [
     "RET504", # Don't force to calculate upon return
     "S101",  # Use of `assert` detected.
     "S301",  # pickle module is unsafe
+    "F841", # Local variable is assigned to but never used
+    "TRY003", # Avoid specifying long messages outside the exception class
+    "EM102", # Exception must not use an f-string literal, assign to variable first
+    "PTH110", # `os.path.exists()` should be replaced by `Path.exists()`
+    "UP038", # Use `X | Y` in `isinstance` call instead of `(X, Y)`
+    "EM101", # Exception must not use a string literal, assign to variable first
+    "PTH113", # `os.path.isfile()` should be replaced by `Path.is_file()`
+    "PLR2004", # Magic value used in comparison, consider replacing `2` with a constant variable
 ]
 
 [tool.ruff.lint.per-file-ignores]

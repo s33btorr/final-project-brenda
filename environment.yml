@@ -1,5 +1,5 @@
 ---
-name: template_project
+name: final_project_btb
 channels: [conda-forge, r, nodefaults]
 dependencies:
   - python ==3.12
@@ -33,5 +33,22 @@ dependencies:
   - r-yaml
   - r-forcats
 
+  # Extra for project - test
+  - pdf2image
+  - pillow
+  - pytesseract
+  - pytorch
+  - torchvision
+  - torchaudio
+  #- transformers
+  - matplotlib
+  #- datasets
+  #- ultralytics ==8.1.34
+
   # Install project
-  - pip: [-e ., pdbp, kaleido]
+  - pip:  # timm
+      - -e .
+      - pdbp
+      - kaleido
+      - supervision
+      - git+https://github.com/facebookresearch/detectron2.git
