@@ -4,6 +4,7 @@ channels: [conda-forge, r, nodefaults]
 dependencies:
   - python ==3.12
   - pip >=21.1
+  - pyarrow
 
   # Development dependencies
   - conda-lock
